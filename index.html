@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ragdoll Universe | Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <nav class="top-nav">
+            <div class="nav-content">
+                <div class="nav-links">
+                    <a href="#" class="nav-item active" id="nav-about"><i class="fas fa-cat"></i><span>О породе</span></a>
+                    <a href="#" class="nav-item" id="nav-care"><i class="fas fa-heart"></i><span>Уход</span></a>
+                    <a href="#" class="nav-item" id="nav-gallery"><i class="fas fa-images"></i><span>Галерея</span></a>
+                    <a href="#" class="nav-item" id="nav-contacts"><i class="fas fa-map-marker-alt"></i><span>Контакты</span></a>
+                </div>
+                <div class="theme-toggle" id="theme-btn">
+                    <div class="toggle-track"><div class="toggle-thumb"></div></div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="bento-grid">
+            <aside class="col-side">
+    <div class="card profile-card">
+        <div class="avatar-container">
+            <img src="img/cat7.jpg" alt="Ragdoll Profile" class="avatar-img">
+        </div>
+        <h2>Ragdoll_simseven</h2>
+        <p class="tagline">Грация в каждом движении</p>
+        <div class="like-wrapper">
+            <button class="like-btn" id="like-trigger">
+                <i class="fas fa-heart"></i> <span id="like-count">124</span>
+            </button>
+        </div>
+    </div>
+    </aside>
+
+            <main class="col-main" id="dynamic-content"></main>
+
+            <aside class="col-side">
+                <div class="card status-card">
+                    <div class="status-header">
+                        <span id="status-led" class="led"></span>
+                        <h3 id="status-label">Загрузка...</h3>
+                    </div>
+                    <div class="work-time">
+                        <i class="far fa-clock"></i> <b>10:00 – 21:00</b>
+                        <p><small>Ежедневно</small></p>
+                    </div>
+                    <a href="https://t.me/ragdoll_kittens" class="tg-btn" target="_blank">
+                        <i class="fab fa-telegram-plane"></i> Написать нам
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div id="photo-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="full-img">
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+:root {
+    --bg: #f0f2f5; --card: #ffffff; --text: #1a1a1a;
+    --accent: #6c5ce7; --border: 1px solid rgba(0,0,0,0.08);
+}
+
+body.dark-mode {
+    --bg: #0a0a0a; --card: #161616; --text: #eeeeee;
+    --border: 1px solid rgba(255,255,255,0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+body { background: var(--bg); color: var(--text); font-family: 'Manrope', sans-serif; overflow-x: hidden; }
+
+.app-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+/* Навигация */
+.top-nav { background: #2d3436; padding: 12px 20px; border-radius: 20px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+.nav-content { display: flex; justify-content: space-between; align-items: center; }
+.nav-links { display: flex; gap: 8px; }
+.nav-item { color: #b2bec3; text-decoration: none; font-weight: 700; padding: 10px 15px; border-radius: 12px; display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
+.nav-item.active { color: white; background: rgba(255,255,255,0.1); }
+
+/* ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ */
+.theme-toggle { cursor: pointer; user-select: none; }
+.toggle-track { width: 50px; height: 26px; background: #4b4b4b; border-radius: 20px; position: relative; padding: 3px; }
+.toggle-thumb { 
+    position: absolute; width: 20px; height: 20px; background: white; border-radius: 50%; 
+    left: 3px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #2d3436;
+}
+.toggle-thumb .fa-moon { display: none; }
+body.dark-mode .toggle-track { background: var(--accent); }
+body.dark-mode .toggle-thumb { left: 27px; color: var(--accent); }
+body.dark-mode .toggle-thumb .fa-sun { display: none; }
+body.dark-mode .toggle-thumb .fa-moon { display: block; }
+
+/* Сетка и Карточки */
+.bento-grid { display: grid; grid-template-columns: 280px 1fr 280px; gap: 20px; }
+.card { background: var(--card); border-radius: 24px; padding: 20px; border: var(--border); margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+
+/* Лайк */
+.like-btn { background: var(--bg); border: var(--border); padding: 10px 25px; border-radius: 25px; cursor: pointer; color: var(--text); font-weight: 800; display: flex; align-items: center; gap: 8px; margin: 0 auto; }
+.like-btn.active { background: #ff4757; color: white; border-color: #ff4757; animation: heartBeat 0.3s ease-in-out; }
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Контент */
+.content-section { animation: fadeIn 0.5s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
+
+/* Карта */
+.map-container { width: 100%; height: 350px; border-radius: 20px; overflow: hidden; margin-top: 20px; border: var(--border); }
+.map-container iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.2); }
+
+/* АДАПТАЦИЯ ПОД МОБИЛКИ */
+@media (max-width: 1000px) {
+    .bento-grid { grid-template-columns: 1fr; }
+    .col-main { order: -1; }
+}
+
+@media (max-width: 600px) {
+    .app-container { padding: 10px; }
+    .nav-content { flex-direction: column; gap: 12px; }
+    .nav-links { width: 100%; justify-content: space-between; gap: 2px; }
+    .nav-item { flex-direction: column; font-size: 0.65rem; padding: 8px 4px; flex: 1; gap: 4px; }
+    .nav-item i { font-size: 1.1rem; }
+    .info-grid { grid-template-columns: 1fr; }
+    .map-container { height: 250px; }
+}
+
+/* Добавь или замени эти стили в style.css */
+.avatar-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    padding: 5px;
+    background: var(--accent);
+    overflow: hidden; /* Обрезает картинку по кругу */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сохраняет пропорции лица котика */
+    border-radius: 50%;
+    background-color: #eee; /* Цвет-заглушка, пока фото грузится */
+}
+
+/* Для мобильных устройств чуть уменьшим размер */
+@media (max-width: 600px) {
+    .avatar-container {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Добавь это в style.css */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+    cursor: zoom-in;
+    transition: transform 0.2s;
+    border: var(--border);
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+/* Фото Модалка */
+.modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; backdrop-filter: blur(8px); }
+.modal.active { display: flex; }
+.modal-content { max-width: 95%; max-height: 85%; border-radius: 15px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+.close-modal { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
