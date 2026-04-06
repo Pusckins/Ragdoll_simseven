@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragdoll_simseven | Путеводитель по породе</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐈</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">Ragdoll_<span>simseven</span></div>
+            <button class="burger" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link active" data-target="about">О породе</a></li>
+                <li><a href="#" class="nav-link" data-target="care">Уход</a></li>
+                <li><a href="#" class="nav-link" data-target="gallery">Галерея</a></li>
+                <li><a href="#" class="nav-link" data-target="breeders">Заводчики</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+        </nav>
+    </header>
+
+    <main class="main-layout">
+        <aside class="sidebar-left">
+            <div class="card profile-card">
+                <div class="profile-img-wrapper">
+                    <img src="img/cat1.jpg" alt="Ragdoll" class="profile-img">
+                </div>
+                <h2 class="profile-name">Ragdoll_simseven</h2>
+                <button class="like-button">
+                    <span class="heart">♡</span> <span id="like-count">124</span>
+                </button>
+            </div>
+            
+            <div class="card status-card">
+                <h3 class="status-title"></h3>
+                <div class="status-item-full">
+                <span class="status-label">График работы:</span>
+                <strong>Ежедневно</strong>
+    </div>
+</div>
+    </div>
+            </div>
+        </aside>
+
+        <section class="content-main">
+            
+            <div id="about" class="tab-content active">
+                <h1 class="page-title">Феномен Тряпичной Куклы</h1>
+                <div class="card about-main-card">
+                    <h3>История и характер</h3>
+                    <p>Регдоллы появились в Калифорнии в 1960-х годах. Их главная особенность — невероятное доверие к человеку. Если вы возьмете регдолла на руки, его мышцы полностью расслабятся, и он буквально «обмякнет», как тряпичная кукла.</p>
+                </div>
+
+                <h2 class="section-subtitle">Характеристики породы</h2>
+                <div class="stats-grid">
+                    <div class="card stat-box">
+                        <div class="stat-circle" style="--percent: 95">9.5</div>
+                        <p>Интеллект</p>
+                    </div>
+                    <div class="card stat-box">
+                        <div class="stat-circle" style="--percent: 100">10</div>
+                        <p>Дружелюбие</p>
+                    </div>
+                    <div class="card stat-box">
+                        <div class="stat-circle" style="--percent: 40">4.0</div>
+                        <p>Активность</p>
+                    </div>
+                    <div class="card stat-box">
+                        <div class="stat-circle" style="--percent: 20">2.0</div>
+                        <p>Агрессия</p>
+                    </div>
+                </div>
+
+                <div class="card facts-card">
+                    <h3>Мифы и реальность</h3>
+                    <div class="fact-row">
+                        <div class="fact-myth">❌ Они не чувствуют боли</div>
+                        <div class="fact-truth">✅ Это опасный миф. Они просто очень терпеливы и спокойны.</div>
+                    </div>
+                    <div class="fact-row">
+                        <div class="fact-myth">❌ Регдоллы — только для квартир</div>
+                        <div class="fact-truth">✅ Им комфортно в помещении, но они обожают безопасные прогулки в саду на шлейке.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="care" class="tab-content">
+                <h1 class="page-title">Искусство ухода</h1>
+                
+                <div class="card care-detailed-card">
+                    <div class="care-header-main">
+                        <span class="care-icon-big">🥩</span>
+                        <div class="care-title-group">
+                            <h3>Рацион и Питание</h3>
+                            <p>Регдоллы растут до 4 лет, поэтому им нужна энергия.</p>
+                        </div>
+                    </div>
+                    <div class="care-body">
+                        <ul class="care-info-list">
+                            <li><strong>Тип корма:</strong> Только супер-премиум или холистик. Минимум зерновых.</li>
+                            <li><strong>Вода:</strong> Регдоллы любят проточную воду. Рекомендуется фонтанчик.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card care-detailed-card">
+                    <div class="care-header-main">
+                        <span class="care-icon-big">✂</span>
+                        <div class="care-title-group">
+                            <h3>Уход за шерстью</h3>
+                            <p>Шелковистая шубка без лишних хлопот.</p>
+                        </div>
+                    </div>
+                    <div class="care-body">
+                        <p>2-3 раза в неделю стальной расческой. У регдоллов нет подшерстка, поэтому шерсть почти не колтунится.</p>
+                    </div>
+                </div>
+
+                <div class="card care-detailed-card health-alert">
+                    <div class="care-header-main">
+                        <span class="care-icon-big">🩺</span>
+                        <div class="care-title-group">
+                            <h3>Здоровье</h3>
+                            <p>Важные медицинские аспекты.</p>
+                        </div>
+                    </div>
+                    <div class="care-body">
+                        <p>Обязательно делайте УЗИ сердца раз в год для профилактики ГКМП.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gallery" class="tab-content">
+                <h1 class="page-title">Галерея</h1>
+                <div class="gallery-masonry">
+                    <div class="gallery-item"><img src="img/cat2.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat3.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat4.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat5.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat6.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat7.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat8.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat9.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat10.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat11.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat12.jpg" alt="1"></div>
+                    <div class="gallery-item"><img src="img/cat13.jpg" alt="1"></div>
+                </div>
+            </div>
+
+            <div id="breeders" class="tab-content">
+    <h1 class="page-title">Связаться с нами</h1>
+    
+    <div class="card breeder-card-full">
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18797.123456789!2d27.7654321!3d53.943210!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc4f964402657%3A0xc39958309f42720b!2z0JrQvtC70L7QtNC40YnQuA!5e0!3m2!1sru!2sby!4v1715000000000!5m2!1sru!2sby" 
+                width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="contact-info-grid">
+            <div class="contact-item">
+                <span class="icon">📞</span>
+                <div>
+                    <p class="label">Телефон</p>
+                    <a href="tel:+375291234567" class="value">+375 (29) 752-89-41</a>
+                </div>
+            </div>
+            
+
+        <div class="social-links-container">
+            <h4>Мы в соцсетях</h4>
+            <div class="social-grid">
+                <a href="https://www.instagram.com/simseven_ragdoll_new?igsh=NTc4MTIwNjQ2YQ==" class="social-btn instagram"><span>Instagram</span></a>
+                <a href="https://t.me/ragdoll_kittens" class="social-btn telegram"><span>Telegram</span></a>
+                <a href="https://www.tiktok.com/@tatsiana_prakhozhaya?_r=1&_t=ZS-95JAFcdRR4O" class="social-btn tiktok"><span>TikTok</span></a>
+                <a href="https://www.facebook.com/share/1Dh5wjhkw8/" class="social-btn facebook"><span>Facebook</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
